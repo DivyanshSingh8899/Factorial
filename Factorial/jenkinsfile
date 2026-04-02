@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clone') {
+            steps {
+                git 'https://github.com/YOUR_USERNAME/YOUR_REPO.git'
+            }
+        }
+
+        stage('Run Factorial') {
+            steps {
+                sh 'python3 factorial.py'
+            }
+        }
+    }
+}
