@@ -4,12 +4,13 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/YOUR_USERNAME/YOUR_REPO.git'
+                echo 'Cloning repository...'
             }
         }
 
-        stage('Run Factorial') {
+        stage('Build') {
             steps {
+                echo 'Running Factorial Program...'
                 sh 'python3 factorial.py'
             }
         }
